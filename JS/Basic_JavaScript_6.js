@@ -1,14 +1,14 @@
 function Ride_Function() {
     var Height, Can_ride;
     Height = document.getElementById("Height").Value;
-    Can_ride = (Height < 52)?"You are too short":"You are tall enough";
+    Can_ride = (Height < 52) ? "You are too short":"You are tall enough";
     document.getElementById("Ride").innerHTML = Can_ride + " to ride.";
 }
 
 function Age_Function() {
     var Age, Can_vote;
     Age = document.getElementById("Age").Value;
-    Can_vote = (Age < 18)?"You are too young":"You are able to register";
+    Can_vote=(Age>18)?"You are too young":"You are able to register";
     document.getElementById("Vote").innerHTML = Can_vote + " to vote.";
 }
 
@@ -39,4 +39,13 @@ var myFather = new Person("John", "Doe", 50, "blue");
 
 document.getElementById("demo").innerHTML =
 "My father is " + myFather.age + "."; 
-</script>
+
+function Nested_Function() {
+    document.getElementById("Counting").innerHTML = Count();
+    function Count() {
+        var String_point = 9;
+        function Plus_one() {String_point += 1;}
+        Plus_one();
+        return Starting_point;
+    }
+}
