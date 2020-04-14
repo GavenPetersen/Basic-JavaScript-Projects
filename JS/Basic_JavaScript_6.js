@@ -37,8 +37,7 @@ function my_function11() {
 
 var myFather = new Person("John", "Doe", 50, "blue");
 
-document.getElementById("demo").innerHTML =
-"My father is " + myFather.age + "."; 
+document.getElementById("demo").innerHTML = "My father is " + myFather.age + "."; 
 
 function Nested_Function() {
     document.getElementById("Counting").innerHTML = Count();
