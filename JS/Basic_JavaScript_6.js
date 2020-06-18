@@ -1,14 +1,14 @@
 function Ride_Function() {
     var Height, Can_ride;
-    Height = document.getElementById("Height").Value;
+    Height = document.getElementById("Height").value;
     Can_ride = (Height < 52) ? "You are too short":"You are tall enough";
     document.getElementById("Ride").innerHTML = Can_ride + " to ride.";
 }
 
 function Age_Function() {
     var Age, Can_vote;
-    Age = document.getElementById("Age").Value;
-    Can_vote=(Age>18)?"You are too young":"You are able to register";
+    Age = document.getElementById("Age").value;
+    Can_vote=(Age<18)?"You are too young":"You are able to register";
     document.getElementById("Vote").innerHTML = Can_vote + " to vote.";
 }
 
@@ -24,7 +24,7 @@ var Erik = new Vehicle("Ford", "Pinto", 1971, "Mustard");
 
 function my_function11() {
     document.getElementById("New_and_This").innerHTML =
-    "Erik drives a " + Erik.Vehicle_Color + "-colored " + Eril.Vehicle_Model +
+    "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model +
     "manufactured in " + Erik.Vehicle_Year;
 }
 
@@ -42,8 +42,8 @@ document.getElementById("demo").innerHTML = "My father is " + myFather.age + "."
 function Nested_Function() {
     document.getElementById("Counting").innerHTML = Count();
     function Count() {
-        var String_point = 9;
-        function Plus_one() {String_point += 1;}
+        var Starting_point = 9;
+        function Plus_one() {Starting_point += 1;}
         Plus_one();
         return Starting_point;
     }
